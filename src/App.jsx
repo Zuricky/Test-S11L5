@@ -3,6 +3,7 @@ import SideBar from "./components/SideBar";
 import MusicSection from "./components/MusicSection";
 import MusicPlayer from "./components/MusicPlayer";
 import SearchResults from "./components/SearchResults";
+import TopBar from "./components/TopBar";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <SideBar />
 
         <main className="col-12 col-md-9 offset-md-3 mainPage">
+          <TopBar />
+
           <SearchResults />
 
           <MusicSection title="Rock Classics" query="Rammstein" sectionId="rockSection" />
