@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedSong, toggleLikeSong } from "../redux/actions";
+import { HeartFill, Heart } from "react-bootstrap-icons";
 
 const SongCard = ({ song }) => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const SongCard = ({ song }) => {
         Artist: {song.artist.name}
       </p>
       <button className="btn btn-link" onClick={handleLikeClick}>
-        {isLiked ? <i className="bi bi-heart-fill" style={{ color: "red" }}></i> : <i className="bi bi-heart"></i>}
+        {isLiked ? <HeartFill color="green" /> : <Heart color="grey" />}
       </button>
     </div>
   );

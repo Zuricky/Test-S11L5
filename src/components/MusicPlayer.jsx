@@ -1,38 +1,43 @@
 import { useSelector } from "react-redux";
+import shuffle from "../assets/img/shuffle.png";
+import prev from "../assets/img/prev.png";
+import play from "../assets/img/play.png";
+import next from "../assets/img/next.png";
+import repeat from "../assets/img/repeat.png";
 
 const MusicPlayer = () => {
   const selectedSong = useSelector((state) => state.selectedSong);
 
   return (
     <div className="container-fluid fixed-bottom bg-container pt-1">
-      <div className="row h-100">
+      <div className="row">
         <div className="col-lg-10 offset-lg-2">
-          <div className="row h-100 flex-column justify-content-center align-items-center">
+          {selectedSong ? (
+            <div>
+              <p>
+                Now Playing: {selectedSong.title} - {selectedSong.artist.name}
+              </p>
+            </div>
+          ) : (
+            <p>Seleziona una canzone per riprodurre</p>
+          )}
+          <div className="row flex-column justify-content-center align-items-center">
             <div className="col-6 col-md-4 playerControls">
-              {selectedSong ? (
-                <div>
-                  <p>
-                    Now Playing: {selectedSong.title} - {selectedSong.artist.name}
-                  </p>
-                </div>
-              ) : (
-                <p>Seleziona una canzone per riprodurre</p>
-              )}
               <div className="d-flex">
                 <a href="#">
-                  <img src="assets/playerbuttons/shuffle.png" alt="shuffle" />
+                  <img src={shuffle} alt="shuffle" />
                 </a>
                 <a href="#">
-                  <img src="assets/playerbuttons/prev.png" alt="prev" />
+                  <img src={prev} alt="prev" />
                 </a>
                 <a href="#">
-                  <img src="assets/playerbuttons/play.png" alt="play" />
+                  <img src={play} alt="play" />
                 </a>
                 <a href="#">
-                  <img src="assets/playerbuttons/next.png" alt="next" />
+                  <img src={next} alt="next" />
                 </a>
                 <a href="#">
-                  <img src="assets/playerbuttons/repeat.png" alt="repeat" />
+                  <img src={repeat} alt="repeat" />
                 </a>
               </div>
               <div className="progress mt-3">

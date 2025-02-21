@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setSearchResults } from "../redux/actions";
+import logo from "../assets/img/logo.png";
+import { HouseDoorFill, BookFill } from "react-bootstrap-icons";
 
 const SideBar = () => {
   const [artist, setArtist] = useState("");
@@ -25,19 +27,22 @@ const SideBar = () => {
       <nav className="navbar navbar-expand-md fixed-left justify-content-between" id="sidebar">
         <div className="container flex-column align-items-start">
           <a className="navbar-brand" href="#">
-            <img src="assets/logo/logo.png" alt="Spotify Logo" width="131" height="40" />
+            <img src={logo} alt="Spotify Logo" width="131" height="40" />
           </a>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <ul>
+              <ul className="px-0">
                 <li>
-                  <a className="nav-item nav-link d-flex align-items-center" href="#">
-                    <i className="bi bi-house-door-fill"></i>&nbsp; Home
+                  <a className="nav-item nav-link d-flex align-items-center pb-3" href="#">
+                    {" "}
+                    <HouseDoorFill size={23} />
+                    &nbsp; Home
                   </a>
                 </li>
                 <li>
                   <a className="nav-item nav-link d-flex align-items-center" href="#">
-                    <i className="bi bi-book-fill"></i>&nbsp; Your Library
+                    <BookFill size={23} />
+                    &nbsp; Your Library
                   </a>
                 </li>
                 <li>
