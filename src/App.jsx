@@ -13,9 +13,9 @@ function App() {
         <main className="col-12 col-md-9 offset-md-3 mainPage">
           <SearchResults />
 
-          <MusicSection />
-          <MusicSection />
-          <MusicSection />
+          <MusicSection title="Rock Classics" query="Rammstein" sectionId="rockSection" />
+          <MusicSection title="Pop Culture" query="Ado" sectionId="popSection" />
+          <MusicSection title="#HipHop" query="eminem" sectionId="hipHopSection" />
         </main>
       </div>
 
