@@ -4,6 +4,7 @@ import prev from "../assets/img/prev.png";
 import play from "../assets/img/play.png";
 import next from "../assets/img/next.png";
 import repeat from "../assets/img/repeat.png";
+import { ProgressBar } from "react-bootstrap";
 
 const MusicPlayer = () => {
   const selectedSong = useSelector((state) => state.selectedSong);
@@ -40,9 +41,7 @@ const MusicPlayer = () => {
                   <img src={repeat} alt="repeat" />
                 </a>
               </div>
-              <div className="progress mt-3">
-                <div role="progressbar"></div>
-              </div>
+              <ProgressBar />;
             </div>
           </div>
         </div>

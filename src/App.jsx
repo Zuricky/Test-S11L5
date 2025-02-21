@@ -4,10 +4,11 @@ import MusicSection from "./components/MusicSection";
 import MusicPlayer from "./components/MusicPlayer";
 import SearchResults from "./components/SearchResults";
 import TopBar from "./components/TopBar";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="container-fluid">
+    <Container className="container-fluid">
       <div className="row">
         <SideBar />
 
@@ -23,7 +24,7 @@ function App() {
       </div>
 
       <MusicPlayer />
-    </div>
+    </Container>
   );
 }
 
